@@ -1,0 +1,27 @@
+<%- layout('layouts/main') %>
+
+
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+
+        <div class="card mt-4 text center">
+            <div class="card-header">
+                <h3>Crear Cuenta</h3>
+            </div>
+            <div class="card-body">
+        
+                <form action="/signup" method="POST">
+                    <input type="email" name="email" placeholder="Insert Email">
+                    <input type="password" name="password" placeholder="Insert Password">
+                
+                    <button type="submit">
+                        Signup
+                    </button>
+                </form>
+        
+        
+            </div>
+        
+        </div>
+    </div>
+</div>

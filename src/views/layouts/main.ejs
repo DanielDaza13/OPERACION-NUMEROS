@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Sistemas Distribuidos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/darkly/bootstrap.min.css" integrity="sha384-Bo21yfmmZuXwcN/9vKrA5jPUMhr7znVBBeLxT9MA4r2BchhusfJ6+n8TLGUcRAtL" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Proyecto Sistemas Distribuidos</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            
+            <%if (user) { %>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile">Perfil</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="/logout">Salir</a>
+                  </li>
+
+            <% } else { %>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/signin">Ingresar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="/signup" >Crear Cuenta</a>
+            </li>
+            <% } %>
+
+          </ul>
+        </div>
+      </nav>
+
+    <div class="container">
+
+        <% if (signupMessage.length > 0){ %>
+
+            <div class="alert alert-danger"><%= signupMessage %></div>
+        
+        
+        <% }  %>
+    
+        <% if (signinMessage.length > 0){ %>
+    
+            <div class="alert alert-danger"><%= signinMessage %></div>
+        
+        
+        <% }  %>
+    
+        
+        <%- body %>
+
+
+    </div>
+
+
+</body>
+</html>
