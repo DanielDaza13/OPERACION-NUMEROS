@@ -3,5 +3,5 @@ const { mongodb } = require('./keys');
 
 
 mongoose.connect(mongodb.URI, {useNewUrlParser: true})
-    .then(db => console.log('datbase is connected'))
+    .then(db => console.log('monngo conectada'))
     .catch(err => console.error(err));

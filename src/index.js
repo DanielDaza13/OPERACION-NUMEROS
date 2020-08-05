@@ -27,6 +27,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
+
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
@@ -46,5 +47,5 @@ require('./routes/index');
 
 //starting the server
 app.listen(app.get('port'),()=>{
-    console.log('Server on port', app.get('port'));
+    console.log('Server escuchando', app.get('port'));
 });

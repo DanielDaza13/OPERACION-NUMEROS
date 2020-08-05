@@ -1,13 +1,50 @@
 <%- layout('layouts/main')%>
-<h1>Profile</h1>
 
-    <div class="card card-body">
-        <h3><%= user.email %> </h3>
-        <p>
-            <%= user.password%>
-        </p>
+    <h5>BIENVENIDO</h5<
+    
 
-        <p>
-            <%= user._id%>
-        </p>
+    <div>
+        <p> email: <%= user.email %> </p>
+       
     </div>
+
+    <div class="container">
+        <div class="row" >
+            <div class="col">
+                <h1>
+                    <center>
+                      CONVERSION BINARIOS
+                    </center>
+                </h1>
+            </div>
+        </div>
+        <br><br>
+        <div class="row "id="cont1">
+            <div class="col">
+                <div class="row" >
+                    <div class="col-2 offset-4" >
+                        <label for="text1"> Numero Binario </label>
+                        <br><br>
+                    </div>
+                    <div class="col-2" >
+                        <input  type="text" id="text1" class="form-control" placeholder="escribe el Numero">
+                    </div>
+                </div>
+                <div class="row" id="cont2">
+                    <br><br>
+                    <div class="col-2 offset-4">
+                        <label for="text2"> Resultado</label>
+                    </div>
+                    <div class="col-2">
+                        <input type="text" id="text2" class="form-control" >
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+        <br><br>
+        <div class="row" id="rowbtn">
+            <div class="col-1 offset-5">
+                <input type="button" class="btn btn-primary " id="bot1" value="ACEPTAR">
+            </div>
